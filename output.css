@@ -30,6 +30,7 @@
     --color-Blue: hsl(212, 86%, 64%);
     --color-Grey-500: hsl(234, 12%, 34%);
     --color-Grey-400: hsl(212, 6%, 44%);
+    --color-White: hsl(0, 0%, 100%);
     --font-Poppins: 'Poppins', sans-serif, system-ui;
   }
 }
@@ -209,6 +210,12 @@
   .max-w-lg {
     max-width: var(--container-lg);
   }
+  .border-collapse {
+    border-collapse: collapse;
+  }
+  .resize {
+    resize: both;
+  }
   .grid-cols-1 {
     grid-template-columns: repeat(1, minmax(0, 1fr));
   }
@@ -220,6 +227,13 @@
   }
   .gap-10 {
     gap: calc(var(--spacing) * 10);
+  }
+  .rounded {
+    border-radius: 0.25rem;
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
   }
   .border-t-Blue {
     border-top-color: var(--color-Blue);
@@ -262,6 +276,9 @@
   }
   .text-Grey-500 {
     color: var(--color-Grey-500);
+  }
+  .underline {
+    text-decoration-line: underline;
   }
   .outline {
     outline-style: var(--tw-outline-style);
@@ -357,16 +374,16 @@
   margin-bottom: calc(var(--spacing) * 5);
   margin-left: auto;
 }
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
 @property --tw-font-weight {
   syntax: "*";
   inherits: false;
 }
 @property --tw-outline-style {
-  syntax: "*";
-  inherits: false;
-  initial-value: solid;
-}
-@property --tw-border-style {
   syntax: "*";
   inherits: false;
   initial-value: solid;
@@ -439,9 +456,9 @@
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
       --tw-font-weight: initial;
       --tw-outline-style: solid;
-      --tw-border-style: solid;
       --tw-shadow: 0 0 #0000;
       --tw-shadow-color: initial;
       --tw-shadow-alpha: 100%;
