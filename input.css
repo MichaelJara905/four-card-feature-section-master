@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@font-face {
+
+    font-family: 'Poppins';
+    src: url("./assets/fonts/Poppins-VariableFont.woff2") format("woff2");
+    font-weight: 200 400 600;
+    font-style: normal;
+    font-display: swap;
+
+}
+
+@theme {
+
+    /* Variables de colores */
+
+    /* Primarios */
+    --color-Red: hsl(0, 78%, 62%);
+    --color-Cyan: hsl(180, 62%, 55%);
+    --color-Orange: hsl(34, 97%, 64%);
+    --color-Blue: hsl(212, 86%, 64%);
+
+    /* Neutros */
+    --color-Grey-500: hsl(234, 12%, 34%);
+    --color-Grey-400: hsl(212, 6%, 44%);
+    --color-White: hsl(0, 0%, 100%);
+
+    /* Variable de fuente */
+    --font-Poppins: 'Poppins', sans-serif, system-ui;
+}
+
+.card {
+    @apply w-full shadow-2xl p-8 border-t-4 rounded-lg max-w-sm mx-auto;
+}
+
+.card-title {
+    @apply text-Grey-500 font-semibold text-xl mb-2;
+}
+
+.feature-text {
+    @apply text-Grey-400 font-normal text-sm mb-10;
+}
+
+.card-icon {
+    @apply ml-auto mb-5;
+}
